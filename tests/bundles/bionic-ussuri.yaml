@@ -107,7 +107,8 @@ applications:
     channel: ussuri/edge
 
   nova-compute:
-    charm: ch:nova-compute
+    #LA_TODO charm: ch:nova-compute
+    charm: /home/ubuntu/Documents/git/nova-compute  # LA_TEMP
     num_units: 1
     storage:
       ephemeral-device: '40G'
@@ -119,7 +120,7 @@ applications:
       debug: true
     to:
       - '8'
-    channel: ussuri/edge
+    #LA_TODO channel: ussuri/edge
 
   nova-compute-nvidia-vgpu:
     charm: ../../nova-compute-nvidia-vgpu.charm
