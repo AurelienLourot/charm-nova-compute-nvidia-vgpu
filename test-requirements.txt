@@ -11,7 +11,8 @@ psutil
 # oslo.i18n dropped py35 support
 oslo.i18n<4.0.0
 git+https://github.com/openstack-charmers/zaza.git#egg=zaza
-git+https://github.com/openstack-charmers/zaza-openstack-tests.git#egg=zaza.openstack
+# LA_TEMP:
+git+https://github.com/AurelienLourot/zaza-openstack-tests.git@temp#egg=zaza.openstack
 pytz    # workaround for 14.04 pip/tox
 pyudev  # for ceph-* charm unit tests (not mocked?)
 cffi==1.14.6; python_version < '3.6'  # cffi 1.15.0 drops support for py35.
