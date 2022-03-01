@@ -35,3 +35,11 @@ tests_options:
   force_deploy:
   - impish-xena
   - jammy-yoga
+
+target_deploy_status:  # LA_TEMP
+  nova-compute:
+    workload-status: blocked
+    workload-status-message-prefix: Services not running
+  nova-compute-nvidia-vgpu:
+    workload-status: blocked
+    workload-status-message-prefix: NVIDIA GPU found
