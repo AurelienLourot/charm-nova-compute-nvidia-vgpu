@@ -30,7 +30,7 @@ applications:
       innodb-buffer-pool-size: 256M
     to:
       - '0'
-    channel: 5.7/edge
+    channel: latest/stable  # LA_TEMP
 
   rabbitmq-server:
     charm: ch:rabbitmq-server
@@ -39,7 +39,7 @@ applications:
       source: *openstack-origin
     to:
       - '1'
-    channel: 3.6/edge
+    channel: latest/stable  # LA_TEMP
 
   nova-cloud-controller:
     charm: ch:nova-cloud-controller
@@ -50,7 +50,7 @@ applications:
       debug: true
     to:
       - '2'
-    channel: queens/edge
+    channel: latest/stable  # LA_TEMP
 
   neutron-api:
     charm: ch:neutron-api
@@ -62,7 +62,7 @@ applications:
       neutron-security-groups: true
     to:
       - '3'
-    channel: queens/edge
+    channel: latest/stable  # LA_TEMP
 
   keystone:
     charm: ch:keystone
@@ -71,7 +71,7 @@ applications:
       openstack-origin: *openstack-origin
     to:
       - '4'
-    channel: queens/edge
+    channel: latest/stable  # LA_TEMP
 
   neutron-gateway:
     charm: ch:neutron-gateway
@@ -81,7 +81,7 @@ applications:
       bridge-mappings: physnet1:br-ex
     to:
       - '5'
-    channel: queens/edge
+    channel: latest/stable  # LA_TEMP
 
   glance:
     charm: ch:glance
@@ -90,11 +90,11 @@ applications:
       openstack-origin: *openstack-origin
     to:
       - '6'
-    channel: queens/edge
+    channel: latest/stable  # LA_TEMP
 
   neutron-openvswitch:
     charm: ch:neutron-openvswitch
-    channel: queens/edge
+    channel: latest/stable  # LA_TEMP
 
   nova-compute:
     #LA_TODO charm: ch:nova-compute
